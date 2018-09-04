@@ -1,6 +1,7 @@
-<h1>Click on a Department to View Inventory</h1>
+<h1>Click on a Department To View Inventory</h1>
 <%= link_to 'Create a new Department', new_department_path %>
 <ul>
-    <%= link_to department.name, department %></li>
-    <% end %>
+  <% @departments.each do |dep| %>
+    <li><%= link_to dep.name, dep %></li>
+  <% end %>
 </ul>
